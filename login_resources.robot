@@ -69,11 +69,11 @@ click login button
     # clique botao enviar
     click button               id:comp-jxad0a5mlink
     Sleep    4
+    # limpa campo nome 
     ${"email_txt"}    Set Variable    id:comp-k8x5vaz9input
-    Sleep    4
-    input text    ${"email_txt"}   vinicius.mpinho@gmail.com
-    Sleep    5
-    Double Click Element    ${"email_txt"}
-    Sleep    3
-    Clear Element Text    ${"email_txt"}
     Press Key     ${"email_txt"}    \\08
+    Press Key     ${"email_txt"}    \\08
+    Press Key     ${"email_txt"}    \\08
+    Press Key     ${"email_txt"}    \\08
+    Press Key     ${"email_txt"}    \\08
+    Sleep    3
