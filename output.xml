@@ -1,502 +1,526 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.2 (Python 3.6.9 on linux)" generated="20200423 01:10:59.259" rpa="false">
-<suite id="s1" name="Ddtfile" source="/home/elsys/Desktop/Teste/umarket_ecom/umarket_ecom/ddtfile.robot">
-<kw name="Open My Browser" library="login_resources" type="setup">
+<robot generator="Robot 3.1.2 (Python 3.6.5 on linux)" generated="20200423 10:24:16.224" rpa="false">
+<suite id="s1" name="Umarketmobi Login" source="/home/elsys/PycharmProjects/umarket_eco/umarketmobi_login.robot">
+<test id="s1-t1" name="OpenPage">
 <kw name="Open Browser" library="Selenium2Library">
 <doc>Opens a new browser instance to the given ``url``.</doc>
 <arguments>
-<arg>${login URL}</arg>
+<arg>${URL}</arg>
 <arg>${browser}</arg>
 </arguments>
-<msg timestamp="20200423 01:10:59.370" level="INFO">Opening browser 'Chrome' to base url 'https://www.umarket.mobi/?siteRevision=138'.</msg>
-<status status="PASS" starttime="20200423 01:10:59.370" endtime="20200423 01:11:05.131"></status>
+<msg timestamp="20200423 10:24:16.813" level="INFO">Opening browser 'Chrome' to base url 'https://www.umarket.mobi/?siteRevision=138'.</msg>
+<status status="PASS" starttime="20200423 10:24:16.812" endtime="20200423 10:24:32.757"></status>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20200423 01:11:05.131" endtime="20200423 01:11:05.235"></status>
+<status status="PASS" starttime="20200423 10:24:32.758" endtime="20200423 10:24:32.888"></status>
 </kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<status status="PASS" starttime="20200423 10:24:32.889" endtime="20200423 10:24:32.889"></status>
+</kw>
+<status status="PASS" starttime="20200423 10:24:16.811" endtime="20200423 10:24:32.890" critical="yes"></status>
+</test>
+<test id="s1-t2" name="TitleTest">
+<kw name="TitleofPage">
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>UMarket</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20200423 10:24:35.573" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200423 10:24:33.911" endtime="20200423 10:24:35.573"></status>
+</kw>
+<msg timestamp="20200423 10:24:36.821" level="FAIL">Title should have been 'UMarket' but was 'Manteinance | UMarket'.</msg>
+<status status="FAIL" starttime="20200423 10:24:32.900" endtime="20200423 10:24:36.821"></status>
+</kw>
+<status status="FAIL" starttime="20200423 10:24:32.899" endtime="20200423 10:24:36.821"></status>
+</kw>
+<status status="FAIL" starttime="20200423 10:24:32.895" endtime="20200423 10:24:36.821" critical="yes">Title should have been 'UMarket' but was 'Manteinance | UMarket'.</status>
+</test>
+<test id="s1-t3" name="Como_Funcionalink">
+<kw name="Link_ComoFunciona_botao">
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
-<arg>10</arg>
+<arg>2</arg>
 </arguments>
-<msg timestamp="20200423 01:11:15.236" level="INFO">Slept 10 seconds</msg>
-<status status="PASS" starttime="20200423 01:11:05.235" endtime="20200423 01:11:15.236"></status>
+<msg timestamp="20200423 10:24:38.823" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200423 10:24:36.823" endtime="20200423 10:24:38.823"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://p[@id='comp-ir9le55m1label']</arg>
+</arguments>
+<msg timestamp="20200423 10:24:38.824" level="INFO">Clicking element 'xpath://p[@id='comp-ir9le55m1label']'.</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20200423 10:24:41.038" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200423 10:24:39.848" endtime="20200423 10:24:41.038"></status>
+</kw>
+<msg timestamp="20200423 10:24:41.085" level="FAIL">ElementNotVisibleException: Message: element not interactable
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 4.15.0-29deepin-generic x86_64)
+</msg>
+<status status="FAIL" starttime="20200423 10:24:38.823" endtime="20200423 10:24:41.085"></status>
+</kw>
+<status status="FAIL" starttime="20200423 10:24:36.822" endtime="20200423 10:24:41.085"></status>
+</kw>
+<status status="FAIL" starttime="20200423 10:24:36.822" endtime="20200423 10:24:41.085" critical="yes">ElementNotVisibleException: Message: element not interactable
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 4.15.0-29deepin-generic x86_64)
+</status>
+</test>
+<test id="s1-t4" name="Botao Planos">
+<kw name="link_botao_Planos">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>4</arg>
+</arguments>
+<msg timestamp="20200423 10:24:45.087" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20200423 10:24:41.086" endtime="20200423 10:24:45.087"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://p[@id='comp-ir9le55m2label']</arg>
+</arguments>
+<msg timestamp="20200423 10:24:45.087" level="INFO">Clicking element 'xpath://p[@id='comp-ir9le55m2label']'.</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20200423 10:24:47.196" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200423 10:24:46.112" endtime="20200423 10:24:47.196"></status>
+</kw>
+<msg timestamp="20200423 10:24:47.196" level="FAIL">ElementNotVisibleException: Message: element not interactable
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 4.15.0-29deepin-generic x86_64)
+</msg>
+<status status="FAIL" starttime="20200423 10:24:45.087" endtime="20200423 10:24:47.196"></status>
+</kw>
+<status status="FAIL" starttime="20200423 10:24:41.086" endtime="20200423 10:24:47.196"></status>
+</kw>
+<status status="FAIL" starttime="20200423 10:24:41.086" endtime="20200423 10:24:47.196" critical="yes">ElementNotVisibleException: Message: element not interactable
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 4.15.0-29deepin-generic x86_64)
+</status>
+</test>
+<test id="s1-t5" name="Botao azul Nossos Planos">
+<kw name="link_botao_azul_Nossos_planos">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20200423 10:24:52.198" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200423 10:24:47.198" endtime="20200423 10:24:52.198"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://p[@id='comp-ir9le55m0label']</arg>
+</arguments>
+<msg timestamp="20200423 10:24:52.198" level="INFO">Clicking element 'xpath://p[@id='comp-ir9le55m0label']'.</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20200423 10:24:54.322" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200423 10:24:53.223" endtime="20200423 10:24:54.322"></status>
+</kw>
+<msg timestamp="20200423 10:24:54.322" level="FAIL">ElementNotVisibleException: Message: element not interactable
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 4.15.0-29deepin-generic x86_64)
+</msg>
+<status status="FAIL" starttime="20200423 10:24:52.198" endtime="20200423 10:24:54.322"></status>
+</kw>
+<status status="FAIL" starttime="20200423 10:24:47.197" endtime="20200423 10:24:54.322"></status>
+</kw>
+<status status="FAIL" starttime="20200423 10:24:47.197" endtime="20200423 10:24:54.323" critical="yes">ElementNotVisibleException: Message: element not interactable
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 4.15.0-29deepin-generic x86_64)
+</status>
+</test>
+<test id="s1-t6" name="Plano Mensal e Plano Anual">
+<kw name="botao_plano_mensal_e_plano_anual">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20200423 10:24:57.324" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200423 10:24:54.324" endtime="20200423 10:24:57.324"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://div[@class='style-k94g1bzl_innerLabel']</arg>
+</arguments>
+<msg timestamp="20200423 10:24:57.325" level="INFO">Clicking element 'xpath://div[@class='style-k94g1bzl_innerLabel']'.</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20200423 10:24:57.342" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 4.15.0-29deepin-generic x86_64)
+</msg>
+<status status="FAIL" starttime="20200423 10:24:57.327" endtime="20200423 10:24:57.343"></status>
+</kw>
+<msg timestamp="20200423 10:24:57.343" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: chrome not reachable
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 4.15.0-29deepin-generic x86_64)
+</msg>
+<msg timestamp="20200423 10:24:57.346" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 4.15.0-29deepin-generic x86_64)
+</msg>
+<status status="FAIL" starttime="20200423 10:24:57.325" endtime="20200423 10:24:57.346"></status>
+</kw>
+<status status="FAIL" starttime="20200423 10:24:54.324" endtime="20200423 10:24:57.346"></status>
+</kw>
+<status status="FAIL" starttime="20200423 10:24:54.323" endtime="20200423 10:24:57.347" critical="yes">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 4.15.0-29deepin-generic x86_64)
+</status>
+</test>
+<test id="s1-t7" name="Botao Cadastro">
+<kw name="Fazer_Cadastro_Botao">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20200423 10:24:59.348" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200423 10:24:57.348" endtime="20200423 10:24:59.348"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>xpath://a[@id='comp-k926fxxllink']</arg>
 </arguments>
-<msg timestamp="20200423 01:11:15.237" level="INFO">Clicking element 'xpath://a[@id='comp-k926fxxllink']'.</msg>
-<status status="PASS" starttime="20200423 01:11:15.237" endtime="20200423 01:11:15.502"></status>
+<msg timestamp="20200423 10:24:59.349" level="INFO">Clicking element 'xpath://a[@id='comp-k926fxxllink']'.</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20200423 10:24:59.360" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 4.15.0-29deepin-generic x86_64)
+</msg>
+<status status="FAIL" starttime="20200423 10:24:59.351" endtime="20200423 10:24:59.361"></status>
 </kw>
+<msg timestamp="20200423 10:24:59.361" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: chrome not reachable
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 4.15.0-29deepin-generic x86_64)
+</msg>
+<msg timestamp="20200423 10:24:59.361" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 4.15.0-29deepin-generic x86_64)
+</msg>
+<status status="FAIL" starttime="20200423 10:24:59.348" endtime="20200423 10:24:59.361"></status>
+</kw>
+<status status="FAIL" starttime="20200423 10:24:57.347" endtime="20200423 10:24:59.362"></status>
+</kw>
+<status status="FAIL" starttime="20200423 10:24:57.347" endtime="20200423 10:24:59.362" critical="yes">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 4.15.0-29deepin-generic x86_64)
+</status>
+</test>
+<test id="s1-t8" name="Dados do usuario correto">
+<kw name="Cadastro dos dados usuario correto">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>4</arg>
+</arguments>
+<msg timestamp="20200423 10:25:03.364" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20200423 10:24:59.364" endtime="20200423 10:25:03.364"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://input[@id='comp-k8x5vaz9input']</arg>
+<arg>Sophia Souza Santos de Pinho</arg>
+</arguments>
+<msg timestamp="20200423 10:25:03.365" level="INFO">Typing text 'Sophia Souza Santos de Pinho' into text field 'xpath://input[@id='comp-k8x5vaz9input']'.</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20200423 10:25:03.368" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 4.15.0-29deepin-generic x86_64)
+</msg>
+<status status="FAIL" starttime="20200423 10:25:03.366" endtime="20200423 10:25:03.368"></status>
+</kw>
+<msg timestamp="20200423 10:25:03.368" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: chrome not reachable
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 4.15.0-29deepin-generic x86_64)
+</msg>
+<msg timestamp="20200423 10:25:03.421" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 4.15.0-29deepin-generic x86_64)
+</msg>
+<status status="FAIL" starttime="20200423 10:25:03.364" endtime="20200423 10:25:03.421"></status>
+</kw>
+<status status="FAIL" starttime="20200423 10:24:59.363" endtime="20200423 10:25:03.421"></status>
+</kw>
+<status status="FAIL" starttime="20200423 10:24:59.363" endtime="20200423 10:25:03.421" critical="yes">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 4.15.0-29deepin-generic x86_64)
+</status>
+</test>
+<test id="s1-t9" name="Mensagem do cadastro sucesso">
+<kw name="Cadastro com sucesso">
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>5</arg>
 </arguments>
-<msg timestamp="20200423 01:11:20.503" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20200423 01:11:15.502" endtime="20200423 01:11:20.503"></status>
+<msg timestamp="20200423 10:25:08.423" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200423 10:25:03.423" endtime="20200423 10:25:08.423"></status>
 </kw>
-<status status="PASS" starttime="20200423 01:10:59.370" endtime="20200423 01:11:20.504"></status>
-</kw>
-<test id="s1-t1" name="w_user_w_phone_w_email_w_company">
-<kw name="Invalid login">
+<kw name="Element Text Should Be" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains exact text ``expected``.</doc>
 <arguments>
-<arg>vini</arg>
-<arg>888</arg>
-<arg>vini</arg>
-<arg>elss1</arg>
+<arg>xpath://*[@id="comp-jxad0a66"]/span/p/span/span/span</arg>
+<arg>Obrigado por se cadastrar!</arg>
 </arguments>
-<kw name="Input name_user" library="login_resources">
-<arguments>
-<arg>${username}</arg>
-</arguments>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>3</arg>
-</arguments>
-<msg timestamp="20200423 01:11:23.509" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20200423 01:11:20.508" endtime="20200423 01:11:23.510"></status>
+<msg timestamp="20200423 10:25:08.424" level="INFO">Verifying element 'xpath://*[@id="comp-jxad0a66"]/span/p/span/span/span' contains exact text 'Obrigado por se cadastrar!'.</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20200423 10:25:08.429" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 4.15.0-29deepin-generic x86_64)
+</msg>
+<status status="FAIL" starttime="20200423 10:25:08.426" endtime="20200423 10:25:08.429"></status>
 </kw>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<arguments>
-<arg>id:comp-k8x5vaz9input</arg>
-<arg>${username}</arg>
-</arguments>
-<msg timestamp="20200423 01:11:23.511" level="INFO">Typing text 'vini' into text field 'id:comp-k8x5vaz9input'.</msg>
-<status status="PASS" starttime="20200423 01:11:23.510" endtime="20200423 01:11:23.702"></status>
+<msg timestamp="20200423 10:25:08.429" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: chrome not reachable
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 4.15.0-29deepin-generic x86_64)
+</msg>
+<msg timestamp="20200423 10:25:08.430" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 4.15.0-29deepin-generic x86_64)
+</msg>
+<status status="FAIL" starttime="20200423 10:25:08.423" endtime="20200423 10:25:08.430"></status>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>1</arg>
-</arguments>
-<msg timestamp="20200423 01:11:24.703" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20200423 01:11:23.702" endtime="20200423 01:11:24.703"></status>
+<status status="FAIL" starttime="20200423 10:25:03.422" endtime="20200423 10:25:08.430"></status>
 </kw>
-<status status="PASS" starttime="20200423 01:11:20.508" endtime="20200423 01:11:24.704"></status>
-</kw>
-<kw name="Input phone number" library="login_resources">
-<arguments>
-<arg>${phonenumber}</arg>
-</arguments>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>3</arg>
-</arguments>
-<msg timestamp="20200423 01:11:27.707" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20200423 01:11:24.706" endtime="20200423 01:11:27.708"></status>
-</kw>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<arguments>
-<arg>xpath://input[@id='comp-k8x5vhg1input']</arg>
-<arg>${phonenumber}</arg>
-</arguments>
-<msg timestamp="20200423 01:11:27.709" level="INFO">Typing text '888' into text field 'xpath://input[@id='comp-k8x5vhg1input']'.</msg>
-<status status="PASS" starttime="20200423 01:11:27.708" endtime="20200423 01:11:27.885"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>1</arg>
-</arguments>
-<msg timestamp="20200423 01:11:28.885" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20200423 01:11:27.885" endtime="20200423 01:11:28.886"></status>
-</kw>
-<status status="PASS" starttime="20200423 01:11:24.704" endtime="20200423 01:11:28.886"></status>
-</kw>
-<kw name="Input Email" library="login_resources">
-<arguments>
-<arg>${emailuser}</arg>
-</arguments>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>4</arg>
-</arguments>
-<msg timestamp="20200423 01:11:32.889" level="INFO">Slept 4 seconds</msg>
-<status status="PASS" starttime="20200423 01:11:28.888" endtime="20200423 01:11:32.890"></status>
-</kw>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<arguments>
-<arg>xpath://input[@id='comp-jxad0a4einput']</arg>
-<arg>${emailuser}</arg>
-</arguments>
-<msg timestamp="20200423 01:11:32.891" level="INFO">Typing text 'vini' into text field 'xpath://input[@id='comp-jxad0a4einput']'.</msg>
-<status status="PASS" starttime="20200423 01:11:32.890" endtime="20200423 01:11:33.070"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>1</arg>
-</arguments>
-<msg timestamp="20200423 01:11:34.071" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20200423 01:11:33.070" endtime="20200423 01:11:34.071"></status>
-</kw>
-<status status="PASS" starttime="20200423 01:11:28.887" endtime="20200423 01:11:34.072"></status>
-</kw>
-<kw name="Input company" library="login_resources">
-<arguments>
-<arg>${companyname}</arg>
-</arguments>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>4</arg>
-</arguments>
-<msg timestamp="20200423 01:11:38.075" level="INFO">Slept 4 seconds</msg>
-<status status="PASS" starttime="20200423 01:11:34.073" endtime="20200423 01:11:38.075"></status>
-</kw>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<arguments>
-<arg>xpath://input[@id='comp-k8x5vvl1input']</arg>
-<arg>${companyname}</arg>
-</arguments>
-<msg timestamp="20200423 01:11:38.076" level="INFO">Typing text 'elss1' into text field 'xpath://input[@id='comp-k8x5vvl1input']'.</msg>
-<status status="PASS" starttime="20200423 01:11:38.076" endtime="20200423 01:11:38.309"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>1</arg>
-</arguments>
-<msg timestamp="20200423 01:11:39.309" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20200423 01:11:38.309" endtime="20200423 01:11:39.310"></status>
-</kw>
-<status status="PASS" starttime="20200423 01:11:34.072" endtime="20200423 01:11:39.311"></status>
-</kw>
-<kw name="click login button" library="login_resources">
-<kw name="Click Button" library="Selenium2Library">
-<doc>Clicks button identified by ``locator``.</doc>
-<arguments>
-<arg>id:comp-jxad0a5mlink</arg>
-</arguments>
-<msg timestamp="20200423 01:11:39.314" level="INFO">Clicking button 'id:comp-jxad0a5mlink'.</msg>
-<status status="PASS" starttime="20200423 01:11:39.313" endtime="20200423 01:11:39.406"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>4</arg>
-</arguments>
-<msg timestamp="20200423 01:11:43.407" level="INFO">Slept 4 seconds</msg>
-<status status="PASS" starttime="20200423 01:11:39.406" endtime="20200423 01:11:43.407"></status>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<arguments>
-<arg>id:comp-k8x5vaz9input</arg>
-</arguments>
-<assign>
-<var>${"email_txt"}</var>
-</assign>
-<msg timestamp="20200423 01:11:43.410" level="INFO">${"email_txt"} = id:comp-k8x5vaz9input</msg>
-<status status="PASS" starttime="20200423 01:11:43.408" endtime="20200423 01:11:43.410"></status>
-</kw>
-<kw name="Press Key" library="Selenium2Library">
-<doc>Deprecated use `Press Keys` instead.</doc>
-<arguments>
-<arg>${"email_txt"}</arg>
-<arg>\\08</arg>
-</arguments>
-<status status="PASS" starttime="20200423 01:11:43.411" endtime="20200423 01:11:43.509"></status>
-</kw>
-<kw name="Press Key" library="Selenium2Library">
-<doc>Deprecated use `Press Keys` instead.</doc>
-<arguments>
-<arg>${"email_txt"}</arg>
-<arg>\\08</arg>
-</arguments>
-<status status="PASS" starttime="20200423 01:11:43.509" endtime="20200423 01:11:43.539"></status>
-</kw>
-<kw name="Press Key" library="Selenium2Library">
-<doc>Deprecated use `Press Keys` instead.</doc>
-<arguments>
-<arg>${"email_txt"}</arg>
-<arg>\\08</arg>
-</arguments>
-<status status="PASS" starttime="20200423 01:11:43.540" endtime="20200423 01:11:43.570"></status>
-</kw>
-<kw name="Press Key" library="Selenium2Library">
-<doc>Deprecated use `Press Keys` instead.</doc>
-<arguments>
-<arg>${"email_txt"}</arg>
-<arg>\\08</arg>
-</arguments>
-<status status="PASS" starttime="20200423 01:11:43.570" endtime="20200423 01:11:43.600"></status>
-</kw>
-<kw name="Press Key" library="Selenium2Library">
-<doc>Deprecated use `Press Keys` instead.</doc>
-<arguments>
-<arg>${"email_txt"}</arg>
-<arg>\\08</arg>
-</arguments>
-<status status="PASS" starttime="20200423 01:11:43.600" endtime="20200423 01:11:43.617"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>3</arg>
-</arguments>
-<msg timestamp="20200423 01:11:46.618" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20200423 01:11:43.617" endtime="20200423 01:11:46.618"></status>
-</kw>
-<status status="PASS" starttime="20200423 01:11:39.311" endtime="20200423 01:11:46.619"></status>
-</kw>
-<status status="PASS" starttime="20200423 01:11:20.507" endtime="20200423 01:11:46.619"></status>
-</kw>
-<status status="PASS" starttime="20200423 01:11:20.504" endtime="20200423 01:11:46.619" critical="yes"></status>
+<status status="FAIL" starttime="20200423 10:25:03.422" endtime="20200423 10:25:08.431" critical="yes">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 4.15.0-29deepin-generic x86_64)
+</status>
 </test>
-<test id="s1-t2" name="w_user_w1_phone_w1_email_w_company">
-<kw name="Invalid login">
-<arguments>
-<arg>vini2</arg>
-<arg>555</arg>
-<arg>vini2</arg>
-<arg>elss2</arg>
-</arguments>
-<kw name="Input name_user" library="login_resources">
-<arguments>
-<arg>${username}</arg>
-</arguments>
+<test id="s1-t10" name="Login Facebook webpage">
+<kw name="Login Facebook page">
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>3</arg>
 </arguments>
-<msg timestamp="20200423 01:11:49.625" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20200423 01:11:46.624" endtime="20200423 01:11:49.625"></status>
+<msg timestamp="20200423 10:25:11.435" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200423 10:25:08.435" endtime="20200423 10:25:11.436"></status>
 </kw>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
 <arguments>
-<arg>id:comp-k8x5vaz9input</arg>
-<arg>${username}</arg>
+<arg>xpath://img[@id='comp-iruti9mw0imageimageimage']</arg>
 </arguments>
-<msg timestamp="20200423 01:11:49.627" level="INFO">Typing text 'vini2' into text field 'id:comp-k8x5vaz9input'.</msg>
-<status status="PASS" starttime="20200423 01:11:49.626" endtime="20200423 01:11:49.808"></status>
+<msg timestamp="20200423 10:25:11.436" level="INFO">Clicking element 'xpath://img[@id='comp-iruti9mw0imageimageimage']'.</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20200423 10:25:11.440" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 4.15.0-29deepin-generic x86_64)
+</msg>
+<status status="FAIL" starttime="20200423 10:25:11.438" endtime="20200423 10:25:11.440"></status>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>1</arg>
-</arguments>
-<msg timestamp="20200423 01:11:50.808" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20200423 01:11:49.808" endtime="20200423 01:11:50.809"></status>
+<msg timestamp="20200423 10:25:11.440" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: chrome not reachable
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 4.15.0-29deepin-generic x86_64)
+</msg>
+<msg timestamp="20200423 10:25:11.440" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 4.15.0-29deepin-generic x86_64)
+</msg>
+<status status="FAIL" starttime="20200423 10:25:11.436" endtime="20200423 10:25:11.441"></status>
 </kw>
-<status status="PASS" starttime="20200423 01:11:46.623" endtime="20200423 01:11:50.809"></status>
+<status status="FAIL" starttime="20200423 10:25:08.434" endtime="20200423 10:25:11.441"></status>
 </kw>
-<kw name="Input phone number" library="login_resources">
-<arguments>
-<arg>${phonenumber}</arg>
-</arguments>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>3</arg>
-</arguments>
-<msg timestamp="20200423 01:11:53.812" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20200423 01:11:50.811" endtime="20200423 01:11:53.812"></status>
-</kw>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<arguments>
-<arg>xpath://input[@id='comp-k8x5vhg1input']</arg>
-<arg>${phonenumber}</arg>
-</arguments>
-<msg timestamp="20200423 01:11:53.813" level="INFO">Typing text '555' into text field 'xpath://input[@id='comp-k8x5vhg1input']'.</msg>
-<status status="PASS" starttime="20200423 01:11:53.813" endtime="20200423 01:11:53.929"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>1</arg>
-</arguments>
-<msg timestamp="20200423 01:11:54.930" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20200423 01:11:53.930" endtime="20200423 01:11:54.931"></status>
-</kw>
-<status status="PASS" starttime="20200423 01:11:50.810" endtime="20200423 01:11:54.931"></status>
-</kw>
-<kw name="Input Email" library="login_resources">
-<arguments>
-<arg>${emailuser}</arg>
-</arguments>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>4</arg>
-</arguments>
-<msg timestamp="20200423 01:11:58.934" level="INFO">Slept 4 seconds</msg>
-<status status="PASS" starttime="20200423 01:11:54.933" endtime="20200423 01:11:58.935"></status>
-</kw>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<arguments>
-<arg>xpath://input[@id='comp-jxad0a4einput']</arg>
-<arg>${emailuser}</arg>
-</arguments>
-<msg timestamp="20200423 01:11:58.936" level="INFO">Typing text 'vini2' into text field 'xpath://input[@id='comp-jxad0a4einput']'.</msg>
-<status status="PASS" starttime="20200423 01:11:58.935" endtime="20200423 01:11:59.125"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>1</arg>
-</arguments>
-<msg timestamp="20200423 01:12:00.126" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20200423 01:11:59.125" endtime="20200423 01:12:00.127"></status>
-</kw>
-<status status="PASS" starttime="20200423 01:11:54.932" endtime="20200423 01:12:00.127"></status>
-</kw>
-<kw name="Input company" library="login_resources">
-<arguments>
-<arg>${companyname}</arg>
-</arguments>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>4</arg>
-</arguments>
-<msg timestamp="20200423 01:12:04.129" level="INFO">Slept 4 seconds</msg>
-<status status="PASS" starttime="20200423 01:12:00.129" endtime="20200423 01:12:04.130"></status>
-</kw>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<arguments>
-<arg>xpath://input[@id='comp-k8x5vvl1input']</arg>
-<arg>${companyname}</arg>
-</arguments>
-<msg timestamp="20200423 01:12:04.131" level="INFO">Typing text 'elss2' into text field 'xpath://input[@id='comp-k8x5vvl1input']'.</msg>
-<status status="PASS" starttime="20200423 01:12:04.130" endtime="20200423 01:12:04.337"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>1</arg>
-</arguments>
-<msg timestamp="20200423 01:12:05.338" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20200423 01:12:04.337" endtime="20200423 01:12:05.339"></status>
-</kw>
-<status status="PASS" starttime="20200423 01:12:00.127" endtime="20200423 01:12:05.339"></status>
-</kw>
-<kw name="click login button" library="login_resources">
-<kw name="Click Button" library="Selenium2Library">
-<doc>Clicks button identified by ``locator``.</doc>
-<arguments>
-<arg>id:comp-jxad0a5mlink</arg>
-</arguments>
-<msg timestamp="20200423 01:12:05.341" level="INFO">Clicking button 'id:comp-jxad0a5mlink'.</msg>
-<status status="PASS" starttime="20200423 01:12:05.341" endtime="20200423 01:12:05.505"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>4</arg>
-</arguments>
-<msg timestamp="20200423 01:12:09.506" level="INFO">Slept 4 seconds</msg>
-<status status="PASS" starttime="20200423 01:12:05.506" endtime="20200423 01:12:09.506"></status>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<arguments>
-<arg>id:comp-k8x5vaz9input</arg>
-</arguments>
-<assign>
-<var>${"email_txt"}</var>
-</assign>
-<msg timestamp="20200423 01:12:09.507" level="INFO">${"email_txt"} = id:comp-k8x5vaz9input</msg>
-<status status="PASS" starttime="20200423 01:12:09.506" endtime="20200423 01:12:09.507"></status>
-</kw>
-<kw name="Press Key" library="Selenium2Library">
-<doc>Deprecated use `Press Keys` instead.</doc>
-<arguments>
-<arg>${"email_txt"}</arg>
-<arg>\\08</arg>
-</arguments>
-<status status="PASS" starttime="20200423 01:12:09.507" endtime="20200423 01:12:09.555"></status>
-</kw>
-<kw name="Press Key" library="Selenium2Library">
-<doc>Deprecated use `Press Keys` instead.</doc>
-<arguments>
-<arg>${"email_txt"}</arg>
-<arg>\\08</arg>
-</arguments>
-<status status="PASS" starttime="20200423 01:12:09.555" endtime="20200423 01:12:09.585"></status>
-</kw>
-<kw name="Press Key" library="Selenium2Library">
-<doc>Deprecated use `Press Keys` instead.</doc>
-<arguments>
-<arg>${"email_txt"}</arg>
-<arg>\\08</arg>
-</arguments>
-<status status="PASS" starttime="20200423 01:12:09.585" endtime="20200423 01:12:09.620"></status>
-</kw>
-<kw name="Press Key" library="Selenium2Library">
-<doc>Deprecated use `Press Keys` instead.</doc>
-<arguments>
-<arg>${"email_txt"}</arg>
-<arg>\\08</arg>
-</arguments>
-<status status="PASS" starttime="20200423 01:12:09.620" endtime="20200423 01:12:09.649"></status>
-</kw>
-<kw name="Press Key" library="Selenium2Library">
-<doc>Deprecated use `Press Keys` instead.</doc>
-<arguments>
-<arg>${"email_txt"}</arg>
-<arg>\\08</arg>
-</arguments>
-<status status="PASS" starttime="20200423 01:12:09.649" endtime="20200423 01:12:09.678"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>3</arg>
-</arguments>
-<msg timestamp="20200423 01:12:12.679" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20200423 01:12:09.679" endtime="20200423 01:12:12.680"></status>
-</kw>
-<status status="PASS" starttime="20200423 01:12:05.340" endtime="20200423 01:12:12.680"></status>
-</kw>
-<status status="PASS" starttime="20200423 01:11:46.623" endtime="20200423 01:12:12.681"></status>
-</kw>
-<status status="PASS" starttime="20200423 01:11:46.622" endtime="20200423 01:12:12.681" critical="yes"></status>
+<status status="FAIL" starttime="20200423 10:25:08.432" endtime="20200423 10:25:11.441" critical="yes">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 4.15.0-29deepin-generic x86_64)
+</status>
 </test>
-<kw name="Close Browser" library="login_resources" type="teardown">
+<test id="s1-t11" name="Login to Tiwtter page">
+<kw name="Login to Twitter">
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
-<arg>10</arg>
+<arg>8</arg>
 </arguments>
-<msg timestamp="20200423 01:12:22.683" level="INFO">Slept 10 seconds</msg>
-<status status="PASS" starttime="20200423 01:12:12.683" endtime="20200423 01:12:22.684"></status>
+<msg timestamp="20200423 10:25:19.443" level="INFO">Slept 8 seconds</msg>
+<status status="PASS" starttime="20200423 10:25:11.442" endtime="20200423 10:25:19.443"></status>
 </kw>
-<kw name="Close All Browsers" library="Selenium2Library">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20200423 01:12:22.684" endtime="20200423 01:12:22.746"></status>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://img[@id='comp-iruti9mw1imageimageimage']</arg>
+</arguments>
+<msg timestamp="20200423 10:25:19.443" level="INFO">Clicking element 'xpath://img[@id='comp-iruti9mw1imageimageimage']'.</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20200423 10:25:19.447" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 4.15.0-29deepin-generic x86_64)
+</msg>
+<status status="FAIL" starttime="20200423 10:25:19.445" endtime="20200423 10:25:19.447"></status>
 </kw>
-<status status="PASS" starttime="20200423 01:12:12.682" endtime="20200423 01:12:22.746"></status>
+<msg timestamp="20200423 10:25:19.447" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: chrome not reachable
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 4.15.0-29deepin-generic x86_64)
+</msg>
+<msg timestamp="20200423 10:25:19.448" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 4.15.0-29deepin-generic x86_64)
+</msg>
+<status status="FAIL" starttime="20200423 10:25:19.443" endtime="20200423 10:25:19.448"></status>
 </kw>
-<status status="PASS" starttime="20200423 01:10:59.259" endtime="20200423 01:12:22.746"></status>
+<status status="FAIL" starttime="20200423 10:25:11.442" endtime="20200423 10:25:19.448"></status>
+</kw>
+<status status="FAIL" starttime="20200423 10:25:11.442" endtime="20200423 10:25:19.448" critical="yes">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 4.15.0-29deepin-generic x86_64)
+</status>
+</test>
+<test id="s1-t12" name="Login to Instagram">
+<kw name="Login to Instagram">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>8</arg>
+</arguments>
+<msg timestamp="20200423 10:25:27.450" level="INFO">Slept 8 seconds</msg>
+<status status="PASS" starttime="20200423 10:25:19.449" endtime="20200423 10:25:27.450"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://img[@id='comp-iruti9mw2imageimageimage']</arg>
+</arguments>
+<msg timestamp="20200423 10:25:27.450" level="INFO">Clicking element 'xpath://img[@id='comp-iruti9mw2imageimageimage']'.</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20200423 10:25:27.454" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 4.15.0-29deepin-generic x86_64)
+</msg>
+<status status="FAIL" starttime="20200423 10:25:27.452" endtime="20200423 10:25:27.455"></status>
+</kw>
+<msg timestamp="20200423 10:25:27.455" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: chrome not reachable
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 4.15.0-29deepin-generic x86_64)
+</msg>
+<msg timestamp="20200423 10:25:27.456" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 4.15.0-29deepin-generic x86_64)
+</msg>
+<status status="FAIL" starttime="20200423 10:25:27.450" endtime="20200423 10:25:27.456"></status>
+</kw>
+<status status="FAIL" starttime="20200423 10:25:19.449" endtime="20200423 10:25:27.456"></status>
+</kw>
+<status status="FAIL" starttime="20200423 10:25:19.449" endtime="20200423 10:25:27.456" critical="yes">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 4.15.0-29deepin-generic x86_64)
+</status>
+</test>
+<test id="s1-t13" name="Login to LinkedIN page">
+<kw name="login_linked_page">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>8</arg>
+</arguments>
+<msg timestamp="20200423 10:25:35.458" level="INFO">Slept 8 seconds</msg>
+<status status="PASS" starttime="20200423 10:25:27.458" endtime="20200423 10:25:35.458"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://img[@id='comp-iruti9mw3imageimageimage']</arg>
+</arguments>
+<msg timestamp="20200423 10:25:35.459" level="INFO">Clicking element 'xpath://img[@id='comp-iruti9mw3imageimageimage']'.</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20200423 10:25:35.465" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 4.15.0-29deepin-generic x86_64)
+</msg>
+<status status="FAIL" starttime="20200423 10:25:35.461" endtime="20200423 10:25:35.466"></status>
+</kw>
+<msg timestamp="20200423 10:25:35.466" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: chrome not reachable
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 4.15.0-29deepin-generic x86_64)
+</msg>
+<msg timestamp="20200423 10:25:35.466" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 4.15.0-29deepin-generic x86_64)
+</msg>
+<status status="FAIL" starttime="20200423 10:25:35.458" endtime="20200423 10:25:35.466"></status>
+</kw>
+<status status="FAIL" starttime="20200423 10:25:27.457" endtime="20200423 10:25:35.466"></status>
+</kw>
+<status status="FAIL" starttime="20200423 10:25:27.457" endtime="20200423 10:25:35.467" critical="yes">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 4.15.0-29deepin-generic x86_64)
+</status>
+</test>
+<doc>Andres Villas - Umarket Mobi Website Test Case</doc>
+<status status="FAIL" starttime="20200423 10:24:16.224" endtime="20200423 10:25:35.469"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0">Critical Tests</stat>
-<stat pass="2" fail="0">All Tests</stat>
+<stat pass="1" fail="12">Critical Tests</stat>
+<stat pass="1" fail="12">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="0" id="s1" name="Ddtfile">Ddtfile</stat>
+<stat pass="1" fail="12" id="s1" name="Umarketmobi Login">Umarketmobi Login</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20200423 10:24:57.343" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: chrome not reachable
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 4.15.0-29deepin-generic x86_64)
+</msg>
+<msg timestamp="20200423 10:24:59.361" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: chrome not reachable
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 4.15.0-29deepin-generic x86_64)
+</msg>
+<msg timestamp="20200423 10:25:03.368" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: chrome not reachable
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 4.15.0-29deepin-generic x86_64)
+</msg>
+<msg timestamp="20200423 10:25:08.429" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: chrome not reachable
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 4.15.0-29deepin-generic x86_64)
+</msg>
+<msg timestamp="20200423 10:25:11.440" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: chrome not reachable
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 4.15.0-29deepin-generic x86_64)
+</msg>
+<msg timestamp="20200423 10:25:19.447" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: chrome not reachable
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 4.15.0-29deepin-generic x86_64)
+</msg>
+<msg timestamp="20200423 10:25:27.455" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: chrome not reachable
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 4.15.0-29deepin-generic x86_64)
+</msg>
+<msg timestamp="20200423 10:25:35.466" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: chrome not reachable
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Linux 4.15.0-29deepin-generic x86_64)
+</msg>
 </errors>
 </robot>
