@@ -1,6 +1,6 @@
 *** Settings ***
 
-Library         Selenium2Library
+Library         SeleniumLibrary
 
 
 
@@ -27,7 +27,7 @@ Open My Browser
 Close Browser
     sleep                      10
     close all browsers
-
+    
 
 Open Login
     go to                      ${login URL}
