@@ -18,7 +18,7 @@ ${URL}  https://www.umarket.mobi/?siteRevision=138
 OpenPage
     open browser    ${URL}     ${browser}
     maximize browser window
-    set selenium speed  2
+    set selenium speed  0.5
     sleep  15
     go to   ${URL}
     sleep   10
